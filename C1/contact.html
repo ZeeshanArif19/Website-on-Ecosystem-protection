@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>body{
+        background: linear-gradient(115deg,
+        rgba(58, 58, 158, 0.8),
+        rgba(136, 136, 206, 0.7))
+        ,url("survey-form-background.jpeg")
+    }
+    .container{
+      margin: auto;
+      width: 50%
+    }
+    .header{
+      text-align: center;
+    }
+    form{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: larger;
+      background-color: rgba(28, 24, 69, 0.8);
+      border-radius: 5px;
+      padding: 25px 50px;
+      color:white;
+      
+      
+    }
+    textarea,select,.begin input,#submit{
+      width: 100%;
+      padding: 10px 10px;
+      box-sizing: border-box;
+      border-radius: 6px;
+    }
+    .header{
+      font-family: 'Courier New', Courier, monospace;
+      color: white;
+    }
+    h1{
+      font-size: xx-large;
+    }
+    .lineheight{
+      line-height: 25px;
+      
+    }
+    .lineheight input{
+      height: 18px;
+      width: 18px;
+      
+    }
+    .inline{
+      vertical-align: middle;
+    }
+    .other{
+      padding-right: 40px;
+      border-radius: 6px;
+     
+    }
+    #submit{
+      background-color: rgb(8, 181, 17);
+      font-size: large;
+      color: white;
+    }</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="title">We Need your Support</h1>
+            <p id="description">Help us protect our ecosystem because Earth is what we all have in common</p>
+        </div>
+        <form id="survey-form">
+            <div class="begin">
+                <p>Name</p>
+                <label id="name-label"><input type="text" id="name" placeholder="Enter you Name" required></label>
+            </div>
+            <div class="begin">
+                <p>Email</p>
+                <label id="email-label"><input type="email" id="email" placeholder="Enter you Email" required></label>
+            </div>
+            <div class="begin">
+                <p>Age (Optional)</p>
+                <label id="number-label"><input type="number" id="number" placeholder="Age" value="age" min="18" max="95"></label>
+            </div>
+            <div class="lineheight">
+                <p>Which best describes your current role?</p>
+                <select id="dropdown">
+                    <option value="Student">Student</option>
+                    <option value="Full job">Full Time Job</option>
+                    <option value="Full Learner">Full Time Learner</option>
+                    <option value="prefer not">Prefer Not To Say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="lineheight">
+                <p>Would you recommend Greenalley Ecosystems to a friend?</p>
+                <label>
+                    <input name="user-recomend" value="definitely" type="radio" class="inline" checked>Definitely
+                </label><br>
+                <label>
+                    <input name="user-recomend" value="Maybe" type="radio" class="inline">Maybe
+                </label><br>
+                <label>
+                    <input name="user-recomend" value="Not sure" type="radio" class="inline">Not sure
+                </label>
+            </div>
+            <div class="lineheight">
+                <p>How would you like to help us? (Check all that apply)</p>
+                <label>
+                    <input name="improved" value="frontend" type="checkbox" class="inline">Plastic Recycle
+                </label><br>
+                <label>
+                    <input name="improved" value="backend" type="checkbox" class="inline">Volunteer 
+                </label><br>
+                <label>
+                    <input name="improved" value="data" type="checkbox" class="inline">E-waste Recycle
+                </label><br>
+                <label>
+                    <input name="improved" value="frontend" type="checkbox" class="inline">Sustainablilty Representative
+                </label><br>
+                <label>
+                    <input name="improved" value="frontend" type="checkbox" class="inline">Other
+                </label>
+                <input type="text" class="other">
+            </div>
+            <div>
+                <p>Any comments or suggestions</p>
+                <textarea value="suggestions" placeholder="Enter your comments..." rows="6" cols="8"></textarea>
+            </div><br>
+            <div>
+                <label>
+                    <input id="submit" name="submit" type="submit">
+                </label>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
